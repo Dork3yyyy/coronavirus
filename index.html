@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<link rel="shortcut icon" href="icon.png">
+<title>კორონა ვირუსის მონიტორინგი</title>
+<style>
+@font-face {
+    font-family: bpg_nino_mtavruli_normal;
+    src: url(bpg_nino_mtavruli_normal.otf);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: bpg_nino_mtavruli_normal;
+    background-color: #e74c3c;
+    background-size: cover;
+}
+#maps {
+    margin-top: 30px;
+    width: 800px;
+    height: 500px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+}
+.total {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.died {
+    margin-left: 230px;
+    margin-top: -29px;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0,0,0,.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+</style>
+</head>
+<body>
+<div class="total">
+<a>ჯამში დაავადებული - 6057</a>
+</div>
+<div class="died">
+<a>გარდაცვლილი - 132</a>
+</div>
+<center><img src="map.png" id="maps"></center>
+<script>
+    $(document).ready(function() {
+        $('#maps').tilt({
+            maxTilt: 10
+        })
+    })  
+    $(document).ready(function() {
+        $('.total').tilt({
+            maxTilt: 10
+        })
+    })   
+    $(document).ready(function() {
+        $('.died').tilt({
+            maxTilt: 10
+        })
+    })    
+</script>
+</body>
+</html>
